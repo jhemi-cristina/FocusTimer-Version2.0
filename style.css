@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-base-color: 240;
+    --bg-color-icons: hsla(240, 9%, 89%, 1);
+   --bg-color-icon: hsla(194, 97, 31, 100%); 
+
+   --text-color: #323238;
+
+   font-size: 62.5%;
+}
+
+body {
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+}
+
+.light {
+    justify-content: end;
+    display: grid;
+    margin: 6rem;
+
+}
+
+.day svg {
+    width: clamp(1rem, 2rem + 3vw, 3rem);
+}
+
+button {
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30rem;
+}
+
+.time {
+    font-size: clamp(4rem, 4rem + 10vw, 8.8rem);
+    display: flex;
+    margin-bottom: 1.7rem;
+    color: var(--text-color)
+}
+
+#controls svg {
+    width: clamp(1rem, 2rem + 4vw, 3rem);
+    gap: 2rem;
+}
+
+#controls  {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+#temperature {
+    max-width: 31rem;
+    width: 100%;
+    max-height: 33.6rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+#temperature button {
+    background-color: var(--bg-color-icons);
+    width: 15rem;
+    height: 16rem;
+    border-radius: 3rem;
+}
+
+#temperature svg {
+    width: clamp(1rem, 2rem + 4vw, 3rem);
+}
+
+
