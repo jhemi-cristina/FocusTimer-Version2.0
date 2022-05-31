@@ -5,11 +5,23 @@
 }
 
 :root {
-    --bg-base-color: 240;
-    --bg-color-icons: hsla(240, 9%, 89%, 1);
+   --bg-base-color: 240;
+   --bg-color-icons: hsla(240, 9%, 89%, 1);
    --bg-color-icon: hsla(194, 97, 31, 100%); 
+   --rage-color: hsl(240, 6%, 21%);
+   --hue: 194;
+
+   --card-selector-color: hsl(var(--hue), 97%, 31%);
+  --card-selector-color-DM: hsl(calc(var(--hue) + 2), 74%, 15%);
 
    --text-color: #323238;
+   --hue-content: 240;
+   --card-selector-content: hsl(calc(var(--hue-content) - 240), 0%, 100%);
+   --card-selector-content-DM: hsl(var(--hue-content), 7%, 78%);
+
+   --bg-night: hsla(240, 5%, 7%, 1);
+   --color-content-night: #ffffff;
+   --color-card-night: hsla(240, 6%, 17%, 1);
 
    font-size: 62.5%;
 }
@@ -85,6 +97,87 @@ header {
 
 #temperature svg {
     width: clamp(1rem, 2rem + 4vw, 3rem);
+    margin-bottom: 4rem;
 }
+
+.hide {
+    display: none;
+}
+
+.volume {
+    -webkit-appearance: none;
+    appearance: none;
+    display: inline-block;
+    width: 6rem;
+    height: 0.2em;
+    position: relative;
+    border-radius: 5px;
+    background-color: var(--rage-color);
+    outline: none;
+    position: absolute;
+    bottom: 2.4rem;
+    left: 2.4rem;
+    cursor: grab;
+  }
+  .volume:-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+  .volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 1.6rem;
+    height: 1.6rem;
+    background-color: var(--rage-color);
+    border-radius: 60px;
+  }
+
+  .card {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card.select-card svg path {
+    fill: var(--card-selector-color);
+  }
+  .card.select-card svg path:last-child {
+    fill: var(--card-selector-content);
+  }
+  .card.select-card .volume {
+    background-color: var(--card-selector-content);
+  }
+  .card.select-card .volume::-webkit-slider-thumb {
+    background-color: var(--card-selector-content);
+  }
+
+  .night {
+    background-color: var(--bg-night);
+  }
+  .nightText {
+    color: var(--color-content-night);
+  }
+  .controlsNight svg path {
+    fill: var(--color-content-night);
+  }
+  .card.cardNight svg path {
+    fill: var(--color-card-night);
+  }
+  .card.cardNight svg path:last-child {
+    fill: var(--color-content-night);
+  }
+  .card.cardNight .volume {
+    background-color: var(--card-selector-content);
+  }
+  .card.cardNight .volume::-webkit-slider-thumb {
+    background-color: var(--card-selector-content);
+  }
+  
+  .cardNight.select-card svg path {
+    fill: var(--card-selector-color-DM);
+  }
+  .nightFooter{
+    background-color: var(--color-card-night);
+  }
 
 
