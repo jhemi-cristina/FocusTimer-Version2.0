@@ -7,18 +7,14 @@
 :root {
    --bg-base-color: 240;
    --bg-color-icons: hsla(240, 9%, 89%, 1);
-   --bg-color-icon: hsla(194, 97, 31, 100%); 
    --rage-color: hsl(240, 6%, 21%);
    --hue: 194;
-
    --card-selector-color: hsl(var(--hue), 97%, 31%);
-  --card-selector-color-DM: hsl(calc(var(--hue) + 2), 74%, 15%);
-
+   --card-selector-color-DM: hsl(calc(var(--hue) + 2), 74%, 15%);
    --text-color: #323238;
    --hue-content: 240;
    --card-selector-content: hsl(calc(var(--hue-content) - 240), 0%, 100%);
    --card-selector-content-DM: hsl(var(--hue-content), 7%, 78%);
-
    --bg-night: hsla(240, 5%, 7%, 1);
    --color-content-night: #ffffff;
    --color-card-night: hsla(240, 6%, 17%, 1);
@@ -151,6 +147,10 @@ header {
     background-color: var(--card-selector-content);
   }
 
+  .card.select-card svg{
+    background-color: var(--bg-color-icon);
+  }
+
   .night {
     background-color: var(--bg-night);
   }
@@ -176,8 +176,13 @@ header {
   .cardNight.select-card svg path {
     fill: var(--card-selector-color-DM);
   }
-  .nightFooter{
-    background-color: var(--color-card-night);
-  }
 
+  @media (max-width: 630px) {
+    header {
+      max-width: 100%;
+      min-width: 375px;
+      display: grid;
+      gap: 70px;
+    }
+  }
 

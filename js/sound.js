@@ -47,20 +47,19 @@ export function Sound() {
     cardElem.volumeStorm.value = volumeStorm();
     cardElem.volumeSummer.value = volumeSummer();
     cardElem.volumeWinter.value = volumeWinter();
-    console.log((cardElem.volume.value = musicVolume()));
   }
-  const volumeSpring = (musicVolume) => {
+  function volumeSpring(musicVolume) {
     springMusic.volume = musicVolume;
-  };
-  const volumeStorm = (musicVolume) => {
+  }
+  function volumeStorm(musicVolume) {
     stormMusic.volume = musicVolume;
-  };
-  const volumeSummer = (musicVolume) => {
+  }
+  function volumeSummer(musicVolume) {
     summerMusic.volume = musicVolume;
-  };
-  const volumeWinter = (musicVolume) => {
+  }
+  function volumeWinter(musicVolume) {
     winterMusic.volume = musicVolume;
-  };
+  }
   const playStartMusic = () => {
     startMusic.play();
   };
